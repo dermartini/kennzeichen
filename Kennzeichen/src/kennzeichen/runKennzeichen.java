@@ -13,13 +13,17 @@ public class runKennzeichen {
 		
 		// ######## Erzeugen des LogFiles #############
 		
-		FileGenerator.generateLogFile("logfile2", 10000);
+		//FileGenerator.generateLogFile("logfile2", 100);
 
 		// ######## Erzeugen der Readlog #############
 		
 		ReadLog rl = new ReadLog();
 		
-		System.out.println(rl.getCountries() );
+		//System.out.println(rl.getCountries() );
+		
+		//System.out.println( rl.getAllEntries("logfile").get(1) );
+		
+		System.out.println(rl.getAllEntriesByCountry("bw", "logfile") );
 	
 
 	}

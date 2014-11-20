@@ -7,7 +7,7 @@ public class LogEntry implements Comparable<Timestamp> {
 	Timestamp timestamp = null;
 	String licenseTag = "";
 
-	public void LogEntry(Timestamp timestamp, String licenseTag) {
+	public LogEntry(Timestamp timestamp, String licenseTag) {
 
 	this.timestamp = timestamp;
 	this.licenseTag = licenseTag;
@@ -22,7 +22,7 @@ public class LogEntry implements Comparable<Timestamp> {
 	
 	public String toString(){
 		
-		return timestamp.getTime() + " : " + this.licenseTag; 
+		return timestamp.toString() + " : " + this.licenseTag; 
 	}
 
 	
