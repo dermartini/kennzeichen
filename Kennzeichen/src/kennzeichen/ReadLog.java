@@ -63,8 +63,7 @@ public class ReadLog {
 				// String timestamp = StringArray[0];
 				// String licenseTag = StringArray[1];
 
-				LogEntry lg = new LogEntry(Timestamp.valueOf(StringArray[0]),
-						StringArray[1]);
+				LogEntry lg = new LogEntry(Timestamp.valueOf(StringArray[0]),StringArray[1]);
 				list.add(lg);
 
 			}
@@ -91,15 +90,16 @@ public class ReadLog {
 					StringArray = eineZeile.split(" -- ");
 
 					String suchtext = StringArray[1];
-					
+									
 					//### DEBUG
-					System.out.println("Suchtext " + suchtext);	
+					//System.out.println("Suchtext " + suchtext);	
 					//### DEBUG
 					
 					Pattern pat = Pattern.compile(p.getProperty(land));
 					
+					
 					//### DEBUG
-					System.out.println("Patter " + p.getProperty(land));	
+					//System.out.println("Patter " + p.getProperty(land));	
 					//### DEBUG
 					
 					Matcher m = pat.matcher(suchtext);
@@ -108,13 +108,13 @@ public class ReadLog {
 
 						LogEntry lg = new LogEntry(Timestamp.valueOf(StringArray[0]), StringArray[1]);
 						//### DEBUG
-						System.out.println("LOGEINTRAG " + lg.toString());	
+						//System.out.println("LOGEINTRAG " + lg.toString());	
 						//### DEBUG
 						list.add(lg);
-					}
-
-					
+					}					
 				}
+			
+			System.out.println("Reading for " + land );
 				
 			}
 
