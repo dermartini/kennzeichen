@@ -28,7 +28,7 @@ public class ReadLog {
 		catch (Exception e) {
 			System.out.println("Fehler : " + e.getMessage());
 		}
-		
+		System.out.println("Hallo");
 		
 		return set;
 		
